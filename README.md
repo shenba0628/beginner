@@ -1,4 +1,18 @@
-# beginner
-beginner
-hello = input("你好，请问你叫什么名字？")  
-print("你好，" + hello + "! 我是 ChatGPT，一个用 Python 编写的人工智能语言模型。")  
+def fibonacci(n):    
+    if n <= 0:    
+        return []    
+    elif n == 1:    
+        return [0]    
+    elif n == 2:    
+        return [0, 1]    
+    else:    
+        fib = [0, 1]    
+        for i in range(2, n):    
+            fib.append(fib[i-1] + fib[i-2])    
+        return fib  
+
+n = int(input("请输入斐波那契数列的第 n 项:"))    
+fib = fibonacci(n)    
+print("斐波那契数列的第", n, "项为:")    
+for i in range(len(fib)):    
+    print(i, ":", fib[i])    
